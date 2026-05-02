@@ -8,6 +8,19 @@ body {
     color: white;
 }
 
+.card {
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #1a1a1a;
+    transition: 0.2s;
+}
+
+.card:hover {
+    border-color: #00ffd5;
+}
+
 .nav {
     position: sticky;
     top: 0;
