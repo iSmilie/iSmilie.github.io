@@ -8,6 +8,39 @@ body {
     color: white;
 }
 
+.nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    background: rgba(0,255,213,0.1);
+}
+
+.nav a.active {
+    background: var(--accent);
+    color: black;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.5px;
+}
+
+p {
+    line-height: 1.6;
+    color: var(--text);
+}
+
 .card {
     border: 1px solid #333;
     padding: 20px;
