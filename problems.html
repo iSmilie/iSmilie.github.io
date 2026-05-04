@@ -39,6 +39,10 @@ function toggleSolution(button) {
         solution.style.maxHeight = solution.scrollHeight + "px";
         solution.classList.add("open");
         button.textContent = "Hide Solution";
+
+        if (window.MathJax) {
+            MathJax.typeset();
+        }
     }
 }
 </script>
