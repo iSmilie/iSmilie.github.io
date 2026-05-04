@@ -27,15 +27,17 @@ window.MathJax = {
 </head>
 <body>
 
-    <script>
+<script>
 function toggleSolution(button) {
     const solution = button.nextElementSibling;
 
-    if (solution.style.maxHeight) {
+    if (solution.classList.contains("open")) {
         solution.style.maxHeight = null;
+        solution.classList.remove("open");
         button.textContent = "Show Solution";
     } else {
         solution.style.maxHeight = solution.scrollHeight + "px";
+        solution.classList.add("open");
         button.textContent = "Hide Solution";
     }
 }
