@@ -95,5 +95,83 @@ and hence
     </div>
 </div>
 
+    <div class="card">
+<h3>Random wandering</h3>
+
+        <p>
+            A man leaves a tavern and wanders randomly. Each of his steps has a length \(L\), but the direction of each step is random. On average, how far from the tavern will he be after a long walk of \(N\) steps?
+        </p>
+
+         <button class="toggle-btn" onclick="toggleSolution(this)">
+        Show Solution
+    </button>
+
+        <div class="solution">
+            <p>The vector of a single step directed at a random angle \(\alpha_i\), uniformly distributed in \([0;2\pi)\), to the \(x\)-axis is
+\[
+\vec{L}=L(\cos\alpha_i\hat{x}+\sin\alpha_i\hat{y}).
+\]
+The displacement vector is given by the sum of the step vectors:
+\[
+\vec{S}=L\left(\sum_{i=1}^{N}\cos\alpha_i\hat{x}+\sum_{i=1}^{N}\sin\alpha_i\hat{y}\right).
+\]
+Therefore, the squared displacement is
+\[
+S^2=L^2\left(\sum_{i=1}^{N}\cos^2\alpha_i+\sum_{i=1}^{N}\sin^2\alpha_i
++2\sum_{j>i}\sin\alpha_i\sin\alpha_j+2\sum_{j>i}\cos\alpha_i\cos\alpha_j\right).
+\]
+
+Averaging, and noting that the mean value of a sum equals the sum of the mean values of its terms, we obtain
+\[
+\langle S^2\rangle=L^2\left(\sum_{i=1}^{N}\langle\cos^2\alpha_i\rangle
++\sum_{i=1}^{N}\langle\sin^2\alpha_i\rangle
++2\sum_{j>i}\langle\cos(\alpha_i-\alpha_j)\rangle\right).
+\]
+Hence,
+\[
+\langle S^2\rangle=NL^2.
+\]
+
+Thus, the root-mean-square displacement is
+\[
+\boxed{S_{\text{rms}}=L\sqrt{N}}.
+\]
+
+\bigskip
+\textit{Remark.}  
+What has been computed above is the root-mean-square displacement (rms).  
+If instead one is interested in the mean value of the magnitude of the displacement vector, then for large \(N\) the central limit theorem can be used.  
+
+The displacement components are
+\[
+S_x = L\sum_{i=1}^N \cos\alpha_i,\qquad 
+S_y = L\sum_{i=1}^N \sin\alpha_i,
+\]
+which have zero means and variances \(\langle S_x^2\rangle=\langle S_y^2\rangle=\tfrac{1}{2}NL^2\).
+In the limit of large \(N\), they are normally distributed. Therefore, the magnitude
+\[
+S = \sqrt{S_x^2+S_y^2}
+\]
+follows the Rayleigh distribution with parameter \(\sigma^2=\tfrac{1}{2}NL^2\).  
+
+For the Rayleigh distribution, it is known that
+\[
+\langle S\rangle = \sigma\sqrt{\frac{\pi}{2}}.
+\]
+Substituting \(\sigma = \sqrt{\tfrac{1}{2}NL^2}\), we obtain
+\[
+\langle |S|\rangle \approx \sqrt{\frac{NL^2}{2}}\,\sqrt{\frac{\pi}{2}}
+= \frac{\sqrt{\pi}}{2}\,L\sqrt{N}\approx 0.886\,L\sqrt{N}.
+\]
+
+Thus, for large \(N\),
+\[
+\boxed{\;\;\langle |S|\rangle \;\approx\; 0.886\,L\sqrt{N}\;}.
+\]
+</p>
+        </div>
+        
+    </div>
+
 </body>
 </html>
