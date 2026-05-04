@@ -177,7 +177,3 @@ strong {
     padding-top: 15px;
 }
 
-.solution.open {
-    padding-top: 15px;
-    box-shadow: inset 0 0 10px rgba(0,255,213,0.05);
-}
