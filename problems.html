@@ -26,6 +26,20 @@ window.MathJax = {
     </style>
 </head>
 <body>
+
+    <script>
+function toggleSolution(button) {
+    const solution = button.nextElementSibling;
+
+    if (solution.style.maxHeight) {
+        solution.style.maxHeight = null;
+        button.textContent = "Show Solution";
+    } else {
+        solution.style.maxHeight = solution.scrollHeight + "px";
+        button.textContent = "Hide Solution";
+    }
+}
+</script>
 <div class="nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
