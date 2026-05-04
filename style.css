@@ -124,3 +124,17 @@ li {
 strong {
     color: var(--accent);
 }
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.card h1 {
+    color: var(--accent);
+}
+
+h2 {
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
